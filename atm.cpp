@@ -102,13 +102,18 @@ char ast;
 							cout <<"\n\n\t\t\t REMAINING BALANCE :  "<<amount<<endl;
 							cout <<"\n\t\t\t Enter the Amount () : ";
 							cin >> amount1;
+							while(amount1>10000)
+								{
+									cout<<"\t\t\t Please enter a valid amount"<<endl;
+									cin>>amount1;
+								}
 							cout << "\n\t\t\t Your remaining quick cash balance:  "<<10000 - amount1<<endl;
 							waiting(3000);
 							receipt();
 							cout << "\n\t\t\tTRANSACTION:        QUICK WITHDRAWAL             "<<endl;
 						 	cout<< "\n\t\t\tAMOUNT:             "<<amount1<<".00              "<<endl;
-						 	cout<< "\n\t\t\tCURRENT BAL:        "<<20000 - amount1<<".00      "<<endl;
-							cout<< "\n\t\t\tAVAILABLE BAL:      "<<20000 - amount1<<".00      "<<endl;
+						 	cout<< "\n\t\t\tCURRENT BAL:        "<<10000 - amount1<<".00      "<<endl;
+							cout<< "\n\t\t\tAVAILABLE BAL:      "<<10000 - amount1<<".00      "<<endl;
 							waiting(5000);
 							amount = amount - amount1;
 							showMenu();
@@ -122,14 +127,19 @@ char ast;
 							cout << "\n\n\t\t\t AVAILABLE BALANCE : "<<amount << endl;
 							cout << "\t\t\t Enter the amount : ";
 							cin >> amount2;
+							while(amount2>10000)
+								{
+									cout<<"\t\t\t Please enter a valid amount"<<endl;
+									cin>>amount2;
+								}
 							cout << "\t\t\t Your remaining savings balance:  "<<10000 - amount2<<endl;
 							waiting(5000);
 							system("cls");
 							receipt();
 							cout <<"\n\t\t\t          TRANSACTION:    SAVINGS WITHDRAWAL                "<<endl;
 							cout<< "\n\t\t\t          AMOUNT:    "<<amount2<<".00\t                     "<<endl;
-							cout<< "\n\t\t\t          CURRENT BAL:    "<<20000 - amount2<<".00          "<<endl;
-							cout<< "\n\t\t\t          AVAILABLE BAL:    "<<20000 - amount2<<".00        "<<endl;
+							cout<< "\n\t\t\t          CURRENT BAL:    "<<10000 - amount2<<".00          "<<endl;
+							cout<< "\n\t\t\t          AVAILABLE BAL:    "<<10000 - amount2<<".00        "<<endl;
 							waiting(5000);
 							amount = amount - amount2;
 							showMenu();
